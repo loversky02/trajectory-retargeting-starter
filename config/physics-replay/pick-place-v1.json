@@ -1,0 +1,43 @@
+{
+  "config_version": "physics_replay.pick_place.v1",
+  "control_hz": 50,
+  "source_robot": "panda",
+  "target_robot": "ur5e_2f85",
+  "cube": {"half_size_m": 0.025, "mass_kg": 0.1, "friction": [1.5, 0.02, 0.0002]},
+  "source_scene": {
+    "object": {"x_m": 0.50, "y_m": -0.12, "yaw_rad": 0.30},
+    "goal": {"x_m": 0.52, "y_m": 0.15, "yaw_rad": -0.20}
+  },
+  "demo_target_scene": {
+    "object": {"x_m": 0.45, "y_m": -0.20, "yaw_rad": -0.50},
+    "goal": {"x_m": 0.58, "y_m": 0.22, "yaw_rad": 0.60}
+  },
+  "demo": {
+    "pregrasp_height_m": 0.10,
+    "grasp_above_center_m": 0.01,
+    "lift_height_m": 0.15,
+    "place_clearance_m": 0.004,
+    "durations_s": {"approach": 2.0, "descend": 1.2, "close": 0.8, "lift": 1.2,
+                    "carry": 2.2, "lower": 1.2, "release": 0.6, "retreat": 1.0}
+  },
+  "retarget": {
+    "segment_lift_threshold_m": 0.03,
+    "approach_radius_m": 0.15,
+    "transition_min_s": 1.0,
+    "transition_speed_mps": 0.15,
+    "transition_rotation_speed_radps": 0.8
+  },
+  "ik": {"max_position_residual_m": 0.005, "max_rotation_residual_rad": 0.05},
+  "success": {
+    "lift_min_m": 0.05,
+    "place_xy_tolerance_m": 0.02,
+    "rest_z_tolerance_m": 0.005,
+    "max_tilt_rad": 0.17
+  },
+  "target_sampling": {
+    "object": {"x_m": [0.40, 0.60], "y_m": [-0.25, 0.0], "yaw_rad": [-0.785, 0.785]},
+    "goal": {"x_m": [0.40, 0.60], "y_m": [0.08, 0.30], "yaw_rad": [-0.785, 0.785]},
+    "min_object_goal_distance_m": 0.15
+  },
+  "evaluation": {"seed": 20261006, "configs": 50}
+}

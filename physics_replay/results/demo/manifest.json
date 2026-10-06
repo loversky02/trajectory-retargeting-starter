@@ -1,0 +1,171 @@
+{
+  "created_at": "2026-10-06T07:47:34+0700",
+  "command": [
+    "python",
+    "-m",
+    "physics_replay",
+    "demo",
+    "--out",
+    "data/physics-replay/runs/demo"
+  ],
+  "config_path": "config/physics-replay/pick-place-v1.json",
+  "config_sha256": "d82af9ce26b6f7cc32e4f78575b1899921921d8d8b02a69e4749286eb8b312a0",
+  "model_receipt_sha256": "a0867851e0d38a3ec54fcb202abf7eccee1c7e1833ddc94b3f74f22b76b6f6a7",
+  "code_sha256": "4539d55da1f4e47972835ecd63d0cf2828c432d2986dfe3f1766885fccea63c1",
+  "git_commit": "7cc7b99b677ec4b885803987d6aab7d405e09a04",
+  "git_dirty": true,
+  "python": "3.12.13",
+  "mujoco": "3.15.0",
+  "numpy": "2.5.3",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "kind": "demo",
+  "methods": {
+    "world_frame": "source TCP poses replayed at the same world coordinates (raw end-effector baseline)",
+    "object_relative": "source TCP re-anchored on the target object, then on the target goal (clean-state poses)",
+    "object_relative_trimmed": "object_relative without the source's free-space approach; a planned transition from the target robot's start pose reaches the object-anchored segment",
+    "target_scripted": "task-informed reference: the target robot runs the scripted demo on the target scene; not a retargeting method or a mathematical success upper bound"
+  },
+  "target_layout": {
+    "object": {
+      "x_m": 0.45,
+      "y_m": -0.2,
+      "yaw_rad": -0.5
+    },
+    "goal": {
+      "x_m": 0.58,
+      "y_m": 0.22,
+      "yaw_rad": 0.6
+    }
+  },
+  "metrics": {
+    "source": {
+      "success": true,
+      "failure_reason": "none",
+      "flags": {
+        "ik_unreachable": false,
+        "floor_collision": false,
+        "grasp_failed": false,
+        "dropped_in_transit": false,
+        "tipped": false,
+        "place_miss": false,
+        "not_released": false
+      },
+      "lift_m": 0.14903610588826122,
+      "final_xy_error_m": 0.001983326339430108,
+      "final_z_error_m": 0.00010775542021618234,
+      "final_tilt_rad": 0.0,
+      "max_ik_position_residual_m": 0.0002305769554510301,
+      "max_ik_rotation_residual_rad": 0.0012958491496510593,
+      "floor_contact_ticks": 0,
+      "tracking_position_error_mean_m": 0.010615596140791982,
+      "tracking_position_error_max_m": 0.034460073883863324,
+      "tracking_rotation_error_max_rad": 0.04039241221959994,
+      "duration_s": 10.2,
+      "frames": 510
+    },
+    "world_frame": {
+      "success": false,
+      "failure_reason": "grasp_failed",
+      "flags": {
+        "ik_unreachable": false,
+        "floor_collision": false,
+        "grasp_failed": true,
+        "dropped_in_transit": false,
+        "tipped": false,
+        "place_miss": true,
+        "not_released": false
+      },
+      "lift_m": -2.613071065082906e-09,
+      "final_xy_error_m": 0.4396589585786336,
+      "final_z_error_m": 0.00010775542021616152,
+      "final_tilt_rad": 0.0,
+      "max_ik_position_residual_m": 0.0001984078748165829,
+      "max_ik_rotation_residual_rad": 0.0010976188321984003,
+      "floor_contact_ticks": 0,
+      "tracking_position_error_mean_m": 0.024064379713759576,
+      "tracking_position_error_max_m": 0.06838561806442478,
+      "tracking_rotation_error_max_rad": 0.07618523112134114,
+      "duration_s": 15.98,
+      "frames": 799
+    },
+    "object_relative": {
+      "success": true,
+      "failure_reason": "none",
+      "flags": {
+        "ik_unreachable": false,
+        "floor_collision": false,
+        "grasp_failed": false,
+        "dropped_in_transit": false,
+        "tipped": false,
+        "place_miss": false,
+        "not_released": false
+      },
+      "lift_m": 0.13845606162338314,
+      "final_xy_error_m": 0.0005281077558717003,
+      "final_z_error_m": 0.00010775542021619622,
+      "final_tilt_rad": 0.0,
+      "max_ik_position_residual_m": 0.00019874217835799882,
+      "max_ik_rotation_residual_rad": 0.0010971832848903648,
+      "floor_contact_ticks": 0,
+      "tracking_position_error_mean_m": 0.024877612682237864,
+      "tracking_position_error_max_m": 0.06978735991280709,
+      "tracking_rotation_error_max_rad": 0.21768909320943516,
+      "duration_s": 19.24,
+      "frames": 962
+    },
+    "object_relative_trimmed": {
+      "success": true,
+      "failure_reason": "none",
+      "flags": {
+        "ik_unreachable": false,
+        "floor_collision": false,
+        "grasp_failed": false,
+        "dropped_in_transit": false,
+        "tipped": false,
+        "place_miss": false,
+        "not_released": false
+      },
+      "lift_m": 0.13846252981548424,
+      "final_xy_error_m": 0.0005290513876351029,
+      "final_z_error_m": 0.00010775542021618581,
+      "final_tilt_rad": 0.0,
+      "max_ik_position_residual_m": 0.0001987421783578009,
+      "max_ik_rotation_residual_rad": 0.0010971832848903648,
+      "floor_contact_ticks": 0,
+      "tracking_position_error_mean_m": 0.02290669577782575,
+      "tracking_position_error_max_m": 0.05268490777393575,
+      "tracking_rotation_error_max_rad": 0.217689093743036,
+      "duration_s": 17.3,
+      "frames": 865
+    },
+    "target_scripted": {
+      "success": true,
+      "failure_reason": "none",
+      "flags": {
+        "ik_unreachable": false,
+        "floor_collision": false,
+        "grasp_failed": false,
+        "dropped_in_transit": false,
+        "tipped": false,
+        "place_miss": false,
+        "not_released": false
+      },
+      "lift_m": 0.14419416932690926,
+      "final_xy_error_m": 0.0005377494936348656,
+      "final_z_error_m": 0.00010775542021617887,
+      "final_tilt_rad": 0.0,
+      "max_ik_position_residual_m": 0.00019902836403820967,
+      "max_ik_rotation_residual_rad": 0.00037409811570765446,
+      "floor_contact_ticks": 0,
+      "tracking_position_error_mean_m": 0.034352994331114696,
+      "tracking_position_error_max_m": 0.1485520583787825,
+      "tracking_rotation_error_max_rad": 0.0855635015535882,
+      "duration_s": 10.2,
+      "frames": 510
+    }
+  },
+  "provenance_redactions": [
+    "config_path: absolute workstation path replaced with repository-relative path; config_sha256 is retained",
+    "no source-code, config, or model-receipt hashes were changed"
+  ]
+}

@@ -1,0 +1,8 @@
+# Versions the results in physics_replay/results/ were produced with (Python 3.12, CPU only).
+mujoco==3.15.0
+numpy==2.5.3
+matplotlib==3.11.2
+imageio==2.38.0
+imageio-ffmpeg==0.6.0
+pillow==12.3.0
+pytest==9.1.1

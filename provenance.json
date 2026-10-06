@@ -1,0 +1,36 @@
+{
+  "schema": "trajectory-retargeting-starter-provenance.v1",
+  "source_revision": "38616efefa7b9ae650f61303f0cc3d7e8aa4436c",
+  "source_history_copied": false,
+  "runtime_python_sha256": {
+    "physics_replay/__init__.py": "4414604628d5b934aeba555d758127df95d5b595079ba40df8d2276f95d07482",
+    "physics_replay/__main__.py": "fef3e297c78fbb66787205a44e16d170f1d209bcaa672b5170ca808f4057c954",
+    "physics_replay/episode.py": "8f94e738969a7efeaf6133c277cf7490c9e6e97908327a754e1e04f56250bc88",
+    "physics_replay/execute.py": "b0a2960ed90aa0c343c626e07718fe1d7dc4a9a1a5827bd19a1f5b2ede65ae73",
+    "physics_replay/kinematics.py": "88b943f596d1831ca634f3520deb881f1ca3a312a6948cfd8d2b3cfd1410e32c",
+    "physics_replay/metrics.py": "83cfe280dab711fa4824c665853e21a4f4b1922c9abe0c5be285861fe71a58ad",
+    "physics_replay/models.py": "f3269d17926e49231d721aee1a924784dcce486e55b86b0006adb08cbd261953",
+    "physics_replay/report.py": "d42a9bd949d7f88029d5e843e142f4d90dc147a1030abb829460d227e0d77885",
+    "physics_replay/retarget.py": "82a4b4303c18390220811189934c32d368ef541655c2c452fcf9a05f349448b5",
+    "physics_replay/runner.py": "806b6978062906f5ea471b19c919a1424175032abcee70bfc7e141bb70bf3e83",
+    "physics_replay/scene.py": "5742d5fa10daa2d114165398001557a1c28732acdcc425abe0dfc0477fe95d86",
+    "physics_replay/source_demo.py": "6296142bc2575712053629675e3479afb7be85af046d2ba1d5dffc8a73aa0579",
+    "physics_replay/transforms.py": "b23168dc55899d6944c0bb3e28f9b493a47f0eae73ba0a5c099eb05dc95daf21",
+    "research_pipeline/__init__.py": "8e8e56b47a56a8945bdfc2560e720edae58a68e0d584bfafd281f3961477c434",
+    "research_pipeline/benchmark.py": "149a873cfef76ea80a146ad2ccb6f96416b52302a6d126bbeb19fe35890c8d76",
+    "research_pipeline/cli.py": "1a2aad57f646b6118670976a488c918acfdc82266a50f07ad854699fe075502e",
+    "research_pipeline/models.py": "65f294b2b27e1a40450143b08027863592f19ab3e81a0470287478d0b52c3b94",
+    "research_pipeline/robots.py": "5fb86dc1eb28895b55c48699f2cccc9f6fc7b4b90e6420034d59c6ffe86b28e3",
+    "research_pipeline/schema.py": "93293f16bb4f538929f65e82e824b4f8d6af9f460cc87f6d1ccc6c53cc6580a2",
+    "research_pipeline/video.py": "2dd735b192a18f8dd1f4bc4ca9fdc2bf7172e3c6a5e8c55bcdf13e764a33bdb1",
+    "tools/research-prototype.py": "ccae63560be2fad7eab16202080e884bb545b37df842e14d7e85d0962f9993ea"
+  },
+  "config_sha256": {
+    "config/physics-replay/pick-place-v1.json": "88377faf61581184dd9278dabce04eb05ccb33611732391ad3d8e32bc59639e4",
+    "config/research-prototype/default.json": "28342e726894e64c2ffb7eb088ff876274f55589923db38d9be44d79ecf5cd5f"
+  },
+  "source_manifest_code_sha256": "4539d55da1f4e47972835ecd63d0cf2828c432d2986dfe3f1766885fccea63c",
+  "source_config_sha256": "d82af9ce26b6f7cc32e4f78575b1899921921d8d8b02a69e4749286eb8b312a0",
+  "source_model_receipt_sha256": "a0867851e0d38a3ec54fcb202abf7eccee1c7e1833ddc94b3f74f22b76b6f6a7",
+  "notes": "Runtime files were selectively imported from a private research source. These hashes identify the imported files; the candidate repository starts with independent Git history."
+}

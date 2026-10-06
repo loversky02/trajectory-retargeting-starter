@@ -1,0 +1,133 @@
+{
+  "created_at": "2026-10-06T07:47:34+0700",
+  "command": [
+    "python",
+    "-m",
+    "physics_replay",
+    "benchmark",
+    "--out",
+    "data/physics-replay/runs/bench-dev-n50"
+  ],
+  "config_path": "config/physics-replay/pick-place-v1.json",
+  "config_sha256": "d82af9ce26b6f7cc32e4f78575b1899921921d8d8b02a69e4749286eb8b312a0",
+  "model_receipt_sha256": "a0867851e0d38a3ec54fcb202abf7eccee1c7e1833ddc94b3f74f22b76b6f6a7",
+  "code_sha256": "4539d55da1f4e47972835ecd63d0cf2828c432d2986dfe3f1766885fccea63c1",
+  "git_commit": "7cc7b99b677ec4b885803987d6aab7d405e09a04",
+  "git_dirty": true,
+  "python": "3.12.13",
+  "mujoco": "3.15.0",
+  "numpy": "2.5.3",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "kind": "benchmark",
+  "seed": 20261006,
+  "configs": 50,
+  "methods": {
+    "world_frame": "source TCP poses replayed at the same world coordinates (raw end-effector baseline)",
+    "object_relative": "source TCP re-anchored on the target object, then on the target goal (clean-state poses)",
+    "object_relative_trimmed": "object_relative without the source's free-space approach; a planned transition from the target robot's start pose reaches the object-anchored segment",
+    "target_scripted": "task-informed reference: the target robot runs the scripted demo on the target scene; not a retargeting method or a mathematical success upper bound"
+  },
+  "elapsed_s": 109.2,
+  "summary": {
+    "methods": {
+      "world_frame": {
+        "successes": 0,
+        "trials": 50,
+        "success_rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.07135003417431873
+        ],
+        "failure_reasons": {
+          "ik_unreachable": 0,
+          "floor_collision": 0,
+          "grasp_failed": 50,
+          "dropped_in_transit": 0,
+          "tipped": 0,
+          "place_miss": 0,
+          "not_released": 0
+        },
+        "final_xy_error_m_median_success": null
+      },
+      "object_relative": {
+        "successes": 41,
+        "trials": 50,
+        "success_rate": 0.82,
+        "wilson95": [
+          0.6920368054529739,
+          0.902299172675462
+        ],
+        "failure_reasons": {
+          "ik_unreachable": 9,
+          "floor_collision": 0,
+          "grasp_failed": 0,
+          "dropped_in_transit": 0,
+          "tipped": 0,
+          "place_miss": 0,
+          "not_released": 0
+        },
+        "final_xy_error_m_median_success": 0.001364269596189586
+      },
+      "object_relative_trimmed": {
+        "successes": 50,
+        "trials": 50,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "failure_reasons": {
+          "ik_unreachable": 0,
+          "floor_collision": 0,
+          "grasp_failed": 0,
+          "dropped_in_transit": 0,
+          "tipped": 0,
+          "place_miss": 0,
+          "not_released": 0
+        },
+        "final_xy_error_m_median_success": 0.0011698585526722046
+      },
+      "target_scripted": {
+        "successes": 50,
+        "trials": 50,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "failure_reasons": {
+          "ik_unreachable": 0,
+          "floor_collision": 0,
+          "grasp_failed": 0,
+          "dropped_in_transit": 0,
+          "tipped": 0,
+          "place_miss": 0,
+          "not_released": 0
+        },
+        "final_xy_error_m_median_success": 0.0007040118856567795
+      }
+    },
+    "paired": {
+      "object_relative_vs_world_frame": {
+        "baseline": "world_frame",
+        "method": "object_relative",
+        "pairs": 50,
+        "only_baseline_succeeds": 0,
+        "only_method_succeeds": 41,
+        "mcnemar_exact_p": 9.094947017729282e-13
+      },
+      "object_relative_trimmed_vs_object_relative": {
+        "baseline": "object_relative",
+        "method": "object_relative_trimmed",
+        "pairs": 50,
+        "only_baseline_succeeds": 0,
+        "only_method_succeeds": 9,
+        "mcnemar_exact_p": 0.00390625
+      }
+    }
+  },
+  "provenance_redactions": [
+    "config_path: absolute workstation path replaced with repository-relative path; config_sha256 is retained",
+    "no source-code, config, or model-receipt hashes were changed"
+  ]
+}
